@@ -1,4 +1,4 @@
-<h2>**Reproducible Pitch Presentation**</h2>
+**<h2>Reproducible Pitch Presentation</h2>**
 
 **Overview**
 
