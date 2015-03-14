@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test deck</title>
+  <title>MPG Analysis for Cars</title>
   <meta charset="utf-8">
-  <meta name="description" content="Test deck">
-  <meta name="author" content="">
+  <meta name="description" content="MPG Analysis for Cars">
+  <meta name="author" content="Reproducible Pitch Presentation">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -32,9 +32,9 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Test deck</h1>
-    <h2></h2>
-    <p><br/></p>
+    <h1>MPG Analysis for Cars</h1>
+    <h2>To provide users with a prediction of the MPG relative to cars</h2>
+    <p>Reproducible Pitch Presentation<br/>7 March 2015</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -43,14 +43,22 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>Overview of the Project</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
+    <p>The objective for this shiny application is to provide users with a prediction of the MPG relative to cars based on the mtcars dataset. Users simply need to enter the gross horsepower, number of cylinders and weight of the cars on the side panel. The result will be displayed automatically on the main panel.</p>
+
+<p>The data was based on the 1974 Motor Trend US magazine and comprised fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models).</p>
+
+<pre><code class="r">library(datasets)
+head(mtcars, 3)
+</code></pre>
+
+<pre><code>##                mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4     21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -58,13 +66,46 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Data Organisation</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">plot(1:10, 1:10)
-</code></pre>
+    <p>The data was filtered from the original data set to extract the relevant variables. The variables selected for this application consisted of:</p>
 
-<p><img src="assets/fig/unnamed-chunk-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+<ul>
+<li>Gross Horsepower (hp)</li>
+<li>Number of Cylinders (cyl)</li>
+<li>Weight (wt)</li>
+</ul>
+
+<p>For each data grouping, the following information was graphed through Box Plot. These plots and the predictive MPG will be displayed automatically on the main panel when the relevant information have been entered on the side panel.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Screenshot of the Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/app.png" alt=""></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Directions on how to visualize this Shiny application</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The Shiny application can be accessed <a href="https://kenntcl.shinyapps.io/mpgcar/">here</a>.</p>
+
+<p>Alternatively, you can download the Server.R and UI.R files <a href="https://github.com/kenntcl/Developing_Data_Products">here</a> and place them in a directory named &#39;mpgcar&#39;. Open an R session and set the working directory to the folder that contains the directory &#39;mpgcar&#39;. Then run the following commands:</p>
+
+<pre><code>library(shiny)
+runApp(&#39;mpgcar&#39;)
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -76,14 +117,26 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='Overview of the Project'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Data Organisation'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Screenshot of the Application'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Directions on how to visualize this Shiny application'>
+         4
       </a>
     </li>
   </ul>
