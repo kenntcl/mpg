@@ -1,35 +1,26 @@
-This README file is the supporting documentation for this Shiny application. It includes three parts:
+Reproducible Pitch Presentation
 
-1. Objective for the Course Project
-2. Description of this Shiny application
-3. Directions on how to visualize this Shiny application
+Overview
 
-Objective for the Course Project
+OK, you've made your shiny app, now it's time to make your pitch. You get 5 slides (inclusive of the title slide)  to pitch a your app. You're going to create a web page using Slidify or Rstudio Presenter with an html5 slide deck.
 
-1. Write a shiny application with associated supporting documentation. The documentation should be thought of as whatever a user will need to get started using your application.
-2. Deploy the application on Rstudio's shiny server.
-3. Share the application link by pasting it into the text box below.
-4. Share your server.R and ui.R code on github.
+Here's what you need:
 
-The application must include the following:
+1. 5 slides to pitch our idea done in Slidify or Rstudio Presenter
+2. Your presentation pushed to github or Rpubs
+3. A link to your github or Rpubs presentation pasted into the text box below
 
-- Some form of input (widget: textbox, radio button, checkbox, ...).
-- Some operation on the ui input in sever.R.
-- Some reactive output displayed as a result of server calculations.
-- You must also include enough documentation so that a novice user could use your application.
-- The documentation should be at the Shiny website itself. Do not post to an external link.
+Your presentation must satisfy the following:
 
-The Shiny application in question is entirely up to you. However, if you're having trouble coming up with ideas, you could start from the simple prediction algorithm done in class and build a new algorithm on one of the R datasets packages. Please make the package simple for the end user, so that they don't need a lot of your prerequisite knowledge to evaluate your application. You should emphasize a simple project given the short time frame. 
+1. It must be done in Slidify or Rstudio Presenter
+2. It must be 5 pages
+3. It must be hosted on github or Rpubs
+4. It must contained some embedded R code that gets run when slidifying the document
 
-Description of this Shiny application
+Notice to publish your slidify presentation to github or Rpubs, there's the publish command. This link outlines how to do it (it's one line). 
 
-This shiny application will allow users to have a prediction of the MPG relative to cars based on the mtcars dataset. Users simply need to enter the gross horsepower, number of cylinders and weight of the cars on the side panel. The result will be automatically displayed on the right panel.
+<http://slidify.org/publish.html>
 
-Directions on how to visualize this Shiny application
+Rstudio presenter has a button to publish directly to Rpubs <https://support.rstudio.com/hc/en-us/articles/200714023-Displaying-and-Distributing-Presentations>. If you are using Rpubs, put in the link to the presentation into the submission box as a http:// link not a https:// link.
 
-Download the server.R and ui.R files and place them in a directory named 'mpgcar'. Open an R session and set the working directory to the folder that contains the directory 'mpgcar'. Then run the following commands:
-
-````r{}
-library(shiny)
-runApp('mpgcar')
-````
+You can also publish using both formats to github manually using gh-pages, though your github branch must have a .nojekyll fle and be on a branch names gh-pages. There's more on gh-pages here: <https://pages.github.com/>  and there is a video lecture outlining how to do this.
